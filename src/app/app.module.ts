@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './image-gallery/image-gallery.component';
 import { ImageDetailComponent } from './image-details/image-details.component';
-import { FilterimagesPipe } from './filterimages.pipe';
+import { FilterImagesPipes } from './filterimages.pipe';
 import { ImageService } from './image.service';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { ImageService } from './image.service';
     AppComponent,
     GalleryComponent,
     ImageDetailComponent,
-    FilterimagesPipe
+    FilterImagesPipes
   ],
   imports: [
     BrowserModule,
@@ -23,7 +23,7 @@ import { ImageService } from './image.service';
     AppRoutingModule,
     //NgbModule
   ],
-  providers: [ImageService, FilterimagesPipe],
+  providers: [ImageService, FilterImagesPipes],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

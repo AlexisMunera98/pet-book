@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ImageDetailComponent } from './image-details.component';
+import {ImageService} from '../image.service';
+import {ActivatedRoute} from '@angular/router';
 
 describe('ImageDetailsComponent', () => {
   let component: ImageDetailComponent;
@@ -8,7 +10,11 @@ describe('ImageDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImageDetailComponent ]
+      declarations: [ ImageDetailComponent ],
+      providers: [
+        ImageService,
+        ActivatedRoute
+      ]
     })
     .compileComponents();
   }));
